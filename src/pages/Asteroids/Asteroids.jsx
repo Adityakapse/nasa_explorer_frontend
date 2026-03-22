@@ -3,22 +3,9 @@ import { fetchNeoWs } from "../../services/nasaService";
 import Loader from "../../components/Loader/Loader";
 import useFetch from "../../hooks/useFetch";
 import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-  PieChart,
-  Pie,
-  Cell,
-  LineChart,
-  Line,
-  Legend,
-} from "recharts";
-
-const COLORS = ["#3B82F6", "#EF4444", "#10B981", "#F59E0B", "#8B5CF6"];
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
+  ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line
+} from 'recharts';
 
 const Asteroids = () => {
   const today = new Date().toISOString().split("T")[0];
