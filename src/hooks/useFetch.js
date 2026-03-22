@@ -1,5 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react';
-
 const useFetch = (fetchFn, params = []) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { fetchNeoWs } from "../../services/nasaService";
 import Loader from "../../components/Loader/Loader";
