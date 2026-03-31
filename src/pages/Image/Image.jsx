@@ -17,12 +17,10 @@ const NasaImageLibrary = () => {
 
   useEffect(() => {
     const load = async () => {
-      console.log('Fetching:', appliedQuery, 'page:', page);
       setLoading(true);
       setError(null);
       try {
         const response = await fetchNasaImages(appliedQuery, page);
-        console.log('Response items:', response.data.data?.items?.length, 'hits:', response.data.data?.metadata?.total_hits);
         setData(response.data.data);
       } catch (err) {
         setError(err.response?.data?.error || 'Something went wrong');
@@ -54,7 +52,11 @@ const NasaImageLibrary = () => {
       {loading && <Loader />}
       {error && <p className="text-red-400">{error}</p>}
       {!loading && items.length === 0 && !error && (
-        <p className="text-gray-400">No results found. Try a different search term.</p>
+        <div className="flex flex-col items-center justify-center py-24 text-center">
+          <p className="text-5xl mb-4">🔭</p>
+          <p className="text-xl font-semibold text-gray-300 mb-2">No results found</p>
+          <p className="text-gray-500 text-sm">Try a different search term like "mars", "apollo 11", or "hubble"</p>
+        </div>
       )}
       {!loading && items.length > 0 && (
         <>
