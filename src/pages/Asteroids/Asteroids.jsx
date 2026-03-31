@@ -58,7 +58,7 @@ const Asteroids = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-2">Near-Earth Asteroid Dashboard</h1>
+      <h1 className="text-4xl font-bold mb-2 gradient-heading">Near-Earth Asteroid Dashboard</h1>
       <p className="text-gray-400 mb-6">Multi-panel analysis of asteroids passing close to Earth</p>
       <AsteroidFilters
         startDate={startDate}

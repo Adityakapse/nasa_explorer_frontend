@@ -41,7 +41,7 @@ const NasaImageLibrary = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-2">NASA Image Library</h1>
+      <h1 className="text-4xl font-bold mb-2 gradient-heading">NASA Image Library</h1>
       <p className="text-gray-400 mb-6">Search NASA's official image and video library</p>
       <ImageSearchBar query={query} onChange={setQuery} onSearch={handleSearch} />
       {totalHits > 0 && (
