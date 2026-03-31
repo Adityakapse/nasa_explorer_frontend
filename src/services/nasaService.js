@@ -10,8 +10,5 @@ export const fetchAPOD = (date) =>
 export const fetchNeoWs = (startDate, endDate) =>
   api.get('/neows', { params: { start_date: startDate, end_date: endDate } });
 
-export const fetchMarsPhotos = (rover, sol, camera) =>{
-    const params = {rover, sol}
-    if (camera) params.camera = camera
-    return api.get('/mars', { params });
-}
+export const fetchNasaImages = (query = 'mars', page = 1) =>
+  api.get('/image', { params: { query, page } });

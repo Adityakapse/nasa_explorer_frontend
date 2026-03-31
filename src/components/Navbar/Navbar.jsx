@@ -4,7 +4,7 @@ const navLinks = [
   { path: '/', label: 'Home' },
   { path: '/apod', label: 'Picture of the Day' },
   { path: '/asteroids', label: 'Asteroids' },
-  { path: '/mars', label: 'Mars Rover' },
+  { path: '/image', label: 'Nasa Images' },
 ];
 
 const Navbar = () => {
